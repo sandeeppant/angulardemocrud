@@ -1,4 +1,4 @@
 angulardemorestful
 ==================
 
-mvn install -Dmaven.test.skip=true
+mvn clean install

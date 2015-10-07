@@ -77,6 +77,9 @@ public class UserMockRepositoryImpl extends GenericMockRepository<User> implemen
                 return Ints.compare(left.getId(), right.getId());
             }
         };
-        return ordering.max(this.users).getId();
+        if(this.users.size()==0)
+        	return 1;
+        else
+        	return ordering.max(this.users).getId();
     }
 }
